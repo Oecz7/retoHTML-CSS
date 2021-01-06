@@ -1,0 +1,290 @@
+/* 
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+Font */
+
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
+/* Design */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    margin-top: -12px;
+    margin-left: 48px;
+}
+
+.banner {
+    margin-top: 22px;
+}
+
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    background: #0d0247;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+}
+
+.listF {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row wrap;
+    margin-top: 20px;
+}
+
+.container-button {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: goldenrod;
+    border: none;
+    color: white;
+    font-weight: bold;
+    width: 120px;
+    height: 40px;
+}
+
+/*
+estilos de las tarjetas
+*/
+
+.main {
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.btn {
+    color: black;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(126, 23, 23, 0.2);
+    background: transparent;
+}
+
+.btn:hover {
+    background-color: rgba(56, 7, 7, 0.12);
+}
+
+.cards {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards_item {
+    display: flex;
+    padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+    .cards_item {
+        width: 50%;
+    }
+}
+
+@media (min-width: 56rem) {
+    .cards_item {
+        width: 50%;
+    }
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card_content {
+    padding: 1.5rem;
+}
+
+.card_title {
+    color: peru;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+}
+
+.card_text {
+    color: black;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+}
+
+/*Estilos de la grilla*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 5px;
+}
+
+.grid-container>div {
+    padding: 5px 0;
+    font-size: 30px;
+}
+
+.item1 {
+    margin: 10px 15px 0 15px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, fit-content(120px));
+    grid-template-rows: repeat(2, fit-content(120px));
+    grid-template-areas: "three four" "five six" "seven seven";
+}
+
+.item2 {
+    text-align: end;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.seven p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*
+estilos del footer
+*/
+
+footer {
+    height: 55px;
+    align-items: center;
+    background: #0d0247;
+    color: white;
+}
+
+.name {
+    padding: 0px;
+    margin: 0px 0px 0px 40px;
+}
+
+.listF {
+    margin: 0px;
+}
+
+.listF a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: white;
+}
+
+.listF a::after {
+    margin-left: 10px;
+    content: "|";
+}
+
+@media all and (max-width: 800px) {
+    .navigation {
+        justify-content: space-around;
+    }
+    .aside-1 {
+        order: 1;
+    }
+    .aside-2 {
+        order: 3;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .navigation {
+        flex-flow: column wrap;
+        padding: 0;
+    }
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
+    .aside {
+        flex: 1 0 0;
+    }
+}
